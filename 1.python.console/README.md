@@ -42,7 +42,31 @@
 Периметр: 14
 Площадь: 12
 ```
+ОТВЕТ:
+https://replit.com/@NikolaiIsaiev/chutok-ghieomietrii?v=1
+```
+def inputNumber(message):
+  while True:
+    try:
+       userInput = int(input(message))
+    except ValueError:
+       print("Введите число!")
+       continue
+    else:
+       return userInput
+       break
 
+#Рутина с квадратом:
+square_side  = inputNumber("Введите длину стороны квадрата: ")
+print("Периметр: ",square_side * 4)
+print("Площадь: ",square_side ** 2)
+
+#Рутина с прямоугольником:
+rect_width = inputNumber("Введите длину прямоугольника: ")
+rect_height = inputNumber("Введите ширину прямоугольника: ")
+print("Периметр: ",(rect_width + rect_height) * 2)
+print("Площадь: ", rect_width * rect_height)
+```
 Программа запрашивает у пользователя длину стороны квадрата и выводит его периметр и площадь. Сразу после этого пользователю предлагается ввести длину и ширину прямоугольника, для которого рассчитывается периметр и площадь. 
 Обратите внимание, что программа должна работать корректно при любых введённых значениях длины и ширины фигуры. 
 
@@ -70,6 +94,29 @@
 ```
 
 ---
+ОТВЕТ
+
+https://replit.com/@NikolaiIsaiev/haram#main.py
+```
+def inputNumber(message):
+  while True:
+    try:
+       userInput = int(input(message))
+    except ValueError:
+       print("Введите число!")
+       continue
+    else:
+       return userInput
+       break
+
+#Ипотека? Прекрасно):
+salary    = inputNumber("Введите заработную плату в месяц: ")
+mortgage  = inputNumber("Введите, какой процент(%) уходит на ипотеку: ")
+spending  = inputNumber("Введите, какой процент(%) уходит на жизнь: ")
+
+print("На ипотеку было потрачено: ", int(salary / 100 * mortgage * 12 ))
+print("Было накоплено: ", int(salary * 12 - (salary / 100 * (mortgage+spending) * 12)) )
+```
 Инструкция по выполнению домашнего задания:
 
 1. Зарегистрируйтесь на сайте [Repl.IT](https://repl.it/).
